@@ -12,10 +12,16 @@ class DetailsVC: UIViewController {
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblJob: UILabel!
+    
+    var selectedsimpson : Simpsons?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        lblName.text = selectedsimpson?.name
+        lblJob.text = selectedsimpson?.job
+        imgView.image = selectedsimpson?.image
+
     }
     
 
